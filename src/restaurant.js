@@ -41,9 +41,6 @@ function removeMenuItem(restaurant, itemName, menuType) {
  
   var menuType = item.type; // This should be 'lunch', 'breakfast', or 'dinner'
  
-  if (!restaurant.menus || !restaurant.menus[menuType]) {
-     return "The restaurant object is not structured correctly or the menu type is invalid.";
-  }
  
   var menuIndex = restaurant.menus[menuType].findIndex(function(menuItem) {
      return menuItem.name === item.name;
